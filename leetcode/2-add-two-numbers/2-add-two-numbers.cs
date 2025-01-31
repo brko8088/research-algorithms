@@ -32,46 +32,35 @@ namespace LeetCode
     public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
       ListNode result = new ListNode(0);
-      bool remainder = false;
-      bool condition = l1.next != null && l2.next != null || l1.next != null ^ l2.next != null;
       var current = result;
 
-      do
+      while (l1 != null || l2 != null)
       {
-        var val1 = l1 != null ? l1.val : 0;
-        var val2 = l2 != null ? l2.val : 0;
-
-        current.val = current.val + val1 + val2;
+        Console.WriteLine("+ l1.val {0} && l2.val {1}", l1.val, l2.val);
+        current.val = current.val + l1.val + l2.val;
 
         if (current.val > 9)
         {
-          remainder = true;
           current.val = current.val - 10;
-        }
-        else
-        {
-          remainder = false;
+          current.next = new ListNode(1);
         }
 
-        condition = l1.next != null && l2.next != null || l1.next != null ^ l2.next != null;
-        if ()
+        if (l1.next != null || l2.next != null)
         {
-          l1 = l1.next;
-          l2 = l2.next;
+          l1 = (l1.next != null) ? l1.next : null;
+          l2 = (l2.next != null) ? l2.next : null;
 
-          if (remainder)
-          {
-            current.next = new ListNode(1);
-            remainder = false;
-          }
-          else
+          if (current.next == null)
           {
             current.next = new ListNode(0);
           }
           current = current.next;
         }
-        while (condition);
-
+        else
+        {
+          break;
+        }
+        Console.ReadKey();
       }
 
       return result;
@@ -82,17 +71,38 @@ namespace LeetCode
   {
     static void Main(string[] args)
     {
+      // Test 1
       Solution.ListNode l1 = Solution.arrayToListNode(new int[] { 2, 4, 3 });
       Solution.ListNode l2 = Solution.arrayToListNode(new int[] { 5, 6, 4 });
 
-      var result = Solution.AddTwoNumbers(l1, l2);
-      var current = result;
+      Console.WriteLine("Start 1");
+      var result1 = Solution.AddTwoNumbers(l1, l2);
+      var current1 = result1;
 
-      for (int i = 0; i < 3; i++)
+      Console.WriteLine("Output 1");
+      while (current1 != null)
       {
-        Console.WriteLine(current.val);
-        current = current.next;
+        Console.WriteLine(current1.val);
+        current1 = (current1.next != null) ? current1.next : null;
       }
+      Console.WriteLine("End 1");
+
+      // Test 2
+      Solution.ListNode l3 = Solution.arrayToListNode(new int[] { 9, 9, 9, 9, 9, 9, 9 });
+      Solution.ListNode l4 = Solution.arrayToListNode(new int[] { 9, 9, 9, 9 });
+
+      Console.WriteLine("Start 2");
+      var result2 = Solution.AddTwoNumbers(l3, l4);
+      var current2 = result2;
+
+      Console.WriteLine("Output 2");
+      while (current2 != null)
+      {
+        Console.WriteLine(current2.val);
+        current2 = (current2.next != null) ? current2.next : null;
+      }
+      Console.WriteLine("End 2");
+
     }
   }
 }
