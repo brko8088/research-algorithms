@@ -31,39 +31,24 @@ namespace LeetCode
 
     public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
-      ListNode result = new ListNode(0);
-      var current = result;
+      ListNode current, result = new ListNode();
+      int carry = 0, sum = 0;
+      current = result;
 
-      do
+      while (l1 != null || l2 != null)
       {
-        Console.WriteLine("+ l1.val {0} && l2.val {1}", l1.val, l2.val);
-        current.val = current.val + l1.val + l2.val;
-        Console.WriteLine("> current.val {0}", current.val);
-
-        if (current.val > 9)
-        {
-          current.val = current.val - 10;
-          current.next = new ListNode(1);
-        }
-
-        if (l1.next != null || l2.next != null)
-        {
-          l1 = (l1.next != null) ? l1.next : new ListNode(0);
-          l2 = (l2.next != null) ? l2.next : new ListNode(0);
-
-          if (current.next == null)
-          {
-            current.next = new ListNode(0);
-          }
-
-          current = current.next;
-        }
-
-        Console.ReadKey();
+        current.next = new ListNode();
+        current = current.next;
+        sum = (l1 != null ? l1.val : 0) + (l2 != null ? l2.val : 0) + carry;
+        carry = (sum % 10) == sum ? 0 : 1;
+        l1 = l1?.next;
+        l2 = l2?.next;
+        current.val = sum % 10;
       }
-      while (l1.next != null || l2.next != null);
+      if (carry == 1)
+        current.next = new ListNode(1);
 
-      return result;
+      return result.next;
     }
   }
 
