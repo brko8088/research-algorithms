@@ -52,22 +52,22 @@ namespace LeetCode
     }
   }
 
-  public class Program
-  {
-    //static void Main(string[] args)
-    //{
-    //  // Test 0
-    //  runProgram(new int[] { 0 }, new int[] { 0 }, 0);
+  public class LeetCodeTwo
+    {
+    LeetCodeTwo()
+    {
+        // Test 0
+        runProgram(new int[] { 0 }, new int[] { 0 }, 0);
 
-    //  // Test 1
-    //  runProgram(new int[] { 9 }, new int[] { 9 }, 1);
+        // Test 1
+        runProgram(new int[] { 9 }, new int[] { 9 }, 1);
 
-    //  // Test 2
-    //  runProgram(new int[] { 2, 4, 3 }, new int[] { 5, 6, 4 }, 2);
+        // Test 2
+        runProgram(new int[] { 2, 4, 3 }, new int[] { 5, 6, 4 }, 2);
 
-    //  // Test 3
-    //  runProgram(new int[] { 9, 9, 9, 9, 9, 9, 9 }, new int[] { 9, 9, 9, 9 }, 3);
-    //}
+        // Test 3
+        runProgram(new int[] { 9, 9, 9, 9, 9, 9, 9 }, new int[] { 9, 9, 9, 9 }, 3);
+    }
 
     static void runProgram(int[] a1, int[] a2, int i)
     {

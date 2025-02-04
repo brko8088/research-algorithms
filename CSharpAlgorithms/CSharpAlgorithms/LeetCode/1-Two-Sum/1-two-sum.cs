@@ -1,15 +1,19 @@
-public class Solution
+namespace LeetCode
 {
-  public int[] TwoSum(int[] nums, int target)
-  {
-    for (int i = 0; i < nums.Count(); i++)
+    using System.Collections.Generic;
+    public class _001_TwoSum
     {
-      for (int j = i + 1; j < nums.Count(); j++)
-      {
-        if (target == nums[i] + nums[j])
-          return [i, j];
-      }
+        public int[] TwoSum(int[] nums, int target)
+        {
+            for (int i = 0; i < nums.Count(); i++)
+            {
+                for (int j = i + 1; j < nums.Count(); j++)
+                {
+                    if (target == nums[i] + nums[j])
+                        return [i, j];
+                }
+            }
+            return [];
+        }
     }
-    return [];
-  }
 }
