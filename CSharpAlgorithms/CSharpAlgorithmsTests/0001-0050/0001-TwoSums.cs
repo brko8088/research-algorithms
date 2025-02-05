@@ -4,11 +4,11 @@ using LeetCode;
 namespace CSharpAlgorithms.Test
 {
     [TestClass]
-    public class _001_TwoSum_Test
+    public class _0001_TwoSum_Test
     {
         private int[] largeArray;
 
-        public _001_TwoSum_Test()
+        public _0001_TwoSum_Test()
         {
             largeArray = new int[20000];
             for (int i = 0; i < 20000; i++)
@@ -23,7 +23,7 @@ namespace CSharpAlgorithms.Test
             var nums = new int[] { 2, 7, 11, 15 };
             var target = 9;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(nums, target);
 
             Assert.AreEqual(2, result.Length);
@@ -37,7 +37,7 @@ namespace CSharpAlgorithms.Test
             var nums = new int[] { 5, 75, 25 };
             var target = 100;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(nums, target);
 
             Assert.AreEqual(2, result.Length);
@@ -51,7 +51,7 @@ namespace CSharpAlgorithms.Test
             var nums = new int[] { 5, 5, 15, 30 };
             var target = 20;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(nums, target);
 
             Assert.AreEqual(2, result.Length);
@@ -65,7 +65,7 @@ namespace CSharpAlgorithms.Test
             var nums = new int[] { 5, 5, 5, 5, 5 };
             var target = 10;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(nums, target);
 
             Assert.AreEqual(2, result.Length);
@@ -79,7 +79,7 @@ namespace CSharpAlgorithms.Test
             var nums = new int[] { 2, 7, 11, 15 };
             var target = 5;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(nums, target);
 
             Assert.AreEqual(0, result.Length);
@@ -91,7 +91,7 @@ namespace CSharpAlgorithms.Test
         {
             var target = 19082;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(largeArray, target);
 
             Assert.AreEqual(2, result.Length);
@@ -105,7 +105,7 @@ namespace CSharpAlgorithms.Test
         {
             var target = 19081;
 
-            var solution = new _001_TwoSum();
+            var solution = new _0001_TwoSum();
             var result = solution.TwoSum(largeArray, target);
 
             Assert.AreEqual(0, result.Length);

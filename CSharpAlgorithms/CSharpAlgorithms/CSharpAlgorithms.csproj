@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="LeetCode\2-Add-Two-Numbers\**" />
+    <EmbeddedResource Remove="LeetCode\2-Add-Two-Numbers\**" />
+    <None Remove="LeetCode\2-Add-Two-Numbers\**" />
+  </ItemGroup>
+
 </Project>
