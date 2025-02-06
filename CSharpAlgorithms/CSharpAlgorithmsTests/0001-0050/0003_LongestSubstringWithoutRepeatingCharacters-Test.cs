@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using LeetCode;
 
-namespace LeetCode.Test
+namespace CSharpAlgorithms.Test
 {
     [TestClass]
     public class _0003_LongestSubstringWithoutRepeatingCharacters_Test
