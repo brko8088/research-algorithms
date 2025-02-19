@@ -1,5 +1,7 @@
-class Solution(object):
-  def twoSum(self, nums, target):
+from typing import List
+
+class _0001_TwoSum(object):
+  def twoSum(self, nums: List[int], target: int) -> List[int]:
     """
     :type nums: List[int]
     :type target: int

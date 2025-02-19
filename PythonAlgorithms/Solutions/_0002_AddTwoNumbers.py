@@ -1,10 +1,9 @@
-# Definition for singly-linked list.
+import sys
+from typing import Optional
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+sys.path.append('../')
 
+from Classes.ListNode import ListNode
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -12,7 +11,7 @@ class ListNode:
 #         self.val = val
 #         self.next = next
 
-class Solution:
+class _0002_AddTwoNumbers:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         cl1 = l1
         cl2 = l2
